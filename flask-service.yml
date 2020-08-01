@@ -2,7 +2,7 @@ server:
   port: 5678
 spring:
   application:
-    name: flask-service
+    name: sidecar
 
 sidecar:
   port: 5000
