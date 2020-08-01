@@ -6,5 +6,5 @@ spring:
 
 sidecar:
   port: 5000
-  health-uri: http://localhost:5000/health.json
-  
+  health-uri: http://localhost:${sidecar.port}/health.json
+  home-page-uri: http://localhost:${sidecar.port}/  
