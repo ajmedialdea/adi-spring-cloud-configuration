@@ -9,7 +9,8 @@ zuul:
       serviceId: echo-service #The name of the service to make the load balancing
     flask-service:
       path: /flask/**
-      serviceId: flask-service #The name of the service to make the load balancing
+      url: http://localhost:5678
+      #serviceId: flask-service #The name of the service to make the load balancing
       
 ribbon: # Eureka interface with Ribbon must be disabled so Ribbon will use the list of servers indicated below
   eureka:
@@ -18,7 +19,7 @@ echo-service:
   ribbon:
     listOfServers: http://localhost:8091,http://localhost:8092
     # Above is the list of servers and ports where the different instances of the service is deployed, so Ribbon can use them for load balancing  
-flask-service:
-  ribbon:
-    listOfServers: http://localhost:5678
+#flask-service:
+  #ribbon:
+    #listOfServers: http://localhost:5678
     # Above is the list of servers and ports where the different instances of the service is deployed, so Ribbon can use them for load balancing
