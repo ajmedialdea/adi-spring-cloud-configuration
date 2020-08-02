@@ -5,6 +5,7 @@ spring:
     name: flask-service
 
 sidecar:
+  hostname: localhost
   port: 5000
-  health-uri: http://localhost:${sidecar.port}/health.json
-  home-page-uri: http://localhost:${sidecar.port}/  
+  health-uri: http://${sidecar.hostname}:${sidecar.port}/health.json
+  home-page-uri: http://${sidecar.hostname}:${sidecar.port}/  
