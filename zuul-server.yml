@@ -8,7 +8,7 @@ zuul:
       path: /echo/**
       serviceId: echo-service #The name of the service to make the load balancing
     flask-service:
-      path: /flask/**
+      path: /**
       serviceId: flask-service #The name of the service to make the load balancing
       
 ribbon: # Eureka interface with Ribbon must be disabled so Ribbon will use the list of servers indicated below
