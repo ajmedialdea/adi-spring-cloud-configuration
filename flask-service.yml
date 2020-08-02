@@ -6,6 +6,8 @@ spring:
 
 sidecar:
   hostname: localhost
+  ip-address: 127.0.0.1
   port: 5000
   health-uri: http://${sidecar.hostname}:${sidecar.port}/health.json
-  home-page-uri: http://${sidecar.hostname}:${sidecar.port}/  
+  home-page-uri: http://${sidecar.hostname}:${sidecar.port}/ 
+  
